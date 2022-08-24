@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField] private LayerMask jumpableGround;
     private float dirX = 0f;
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private float moveSpeed = 16f;
+    [SerializeField] private float jumpForce = 16f;
     private enum MovementState { idle, running, jumping, falling }
 
     // Start is called before the first frame update
