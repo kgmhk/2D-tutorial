@@ -8,9 +8,11 @@ public class ItemCollector : MonoBehaviour
 
     private int cherries = 0;
     [SerializeField] private Text cherriesText;
+    [SerializeField] private AudioSource CollectSoundEffect;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Cherry")) {
+            CollectSoundEffect.Play();
             cherries++;
             Destroy(other.gameObject);
             Debug.Log("Cherries : " + cherries);
